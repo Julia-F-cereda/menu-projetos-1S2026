@@ -16,8 +16,6 @@ Este projeto foi desenvolvido com o objetivo de armazenar e organizar trabalhos 
 <P>2. Abra o arquivo `index.html`.</P>
 <P>3. Execute utilizando a extensão Live Server no VS Code.</P>
 
-<h3>FUNCIONALIDADES DO PROJETO</h3>
-<p>BOTÕES PARA MUDAR PAGINA:  Os boões da pagina inicial entram nos arquivos de projetos</p>
 
 <h3>TECNOLOGIAS DO PROJETO</h3>
 <P>Java Script</P>

@@ -3,21 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto 03</title>
-    <!--css-->
     <link rel="stylesheet" href="../css/global.css">
     <!--fontes-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
+    <title>O rei dos magos</title>
+    <style>
+        .container{
+            
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: rgb(167, 109, 194);
+            border-radius: 25px;
+            width: 30%;
+            
+        }
+        body{
+        
+            background-color: rgb(106, 40, 147);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        h1{
+            color: rgb(54, 12, 89);
+        }
+        .texto{
+            text-align: justify;
+            text-align: center;
+    
+            
+        }
+
+        button{
+            background-color: rgb(84, 11, 111);
+            border-radius: 20px;
+
+        }
+        *{
+            box-sizing: border-box;
+        }
+
+    </style>
 </head>
 <body>
-    <h1>Projeto 03</h1>
-    <!-- <script src="../js/navegacao.js"></script> -->
-    <script src="/js/global.js"></script>
-    <!-- <script src="/js/global-auto.js"></script> -->
-
     
+    <div class= "container">
+        <h1> Rei dos Magos 👑🧙‍♂️</h1>
+        <p class="texto"> Olá principe ou princesa mago(a), hoje vamos fazer uma grande magia, voce só vai precisar me dar duas informações simples. </p>
+        <button onclick="mago()"> Iniciar jogo</button>
+        <button onclick="magoDeNovo()">Jogar Novamente</button>
+        <button onclick="magoExplica()">Descubra a magia</button>
+    </div>   
+    
+    <script>
+        function mago(){
+            let num_final = Number(prompt('qual numero voce quer que apareça no final?'));
+            let num_esc = Number(prompt('Qual numero sera o inicial?'));
+        
+
+            let dobro = num_final * 2;
+            let dobro_in = num_esc * 2;
+            let soma = (Number(dobro)) + (Number(dobro_in));
+            let div = (Number(soma)) / 2;
+            let sub = (Number(div)) - num_esc;
+
+            alert('1° Passo: multiplique o numero final por 2');
+            alert('2° Passo: multiplique o numero escolhido por 2');
+            alert('3° Passo: some os resultados');
+            alert('4° Passo: divida o resultado por 2');
+            alert('Ultimo passo: subtraia o resultado pelo numero inicial');
+            alert('O resultado foi:' + sub);
+        };
+
+        function magoDeNovo(){
+            alert('Oba! Pelo visto voce gostou da magica, vamos jogar novamente');
+            let num_final = Number(prompt('Vamos la, qual sera o numero final da vez?'));
+            let num_esc = Number(prompt('E o numero inicial?'));
+
+            let dobro = num_final * 2;
+            let dobro_in = num_esc * 2;
+            let soma = (Number(dobro)) + (Number(dobro_in));
+            let div = (Number(soma)) / 2;
+            let sub = (Number(div)) - num_esc;
+
+            alert('1° Passo: multiplique o numero final por 2😎');
+            alert('2° Passo: multiplique o numero escolhido por 2😉');
+            alert('3° Passo: some os resultado🐱‍🐉');
+            alert('4° Passo: divida o resultado por 2🎉');
+            alert('Ultimo passo: subtraia o resultado pelo numero inicial✌');
+            alert('O resultado foi:' + sub);
+        };
+
+        function magoExplica(){
+            alert('Agora irei te revelar o meu truque!');
+            alert('O passo 1 funciona da seguinte maneira: quando voce multiplica o numero que voce quer que apareça por dois, ele dobra certo?');
+            alert('O pasos 2 pede pra voce dobrar tambem o numero que voce pois de inicio, correto?');
+            alert('O passo 3, voce precisa somar esses dois numeros dobrados, isso tem um motivo');
+            alert('O passo 4 te pede pra dividir esse resultado por dois, isso faz com que haja uma anulação das muliplicações');
+            alert('E na subtraçaõ, voce vai tirar a soma do numero inicial');
+            alert('E pronto, essa é nossa magia, voce esta pronto para virar um mago!');
+        };
+        
+
+    </script>
+    <script src="../js/menu/global-auto.js"></script>
 </body>
 </html>

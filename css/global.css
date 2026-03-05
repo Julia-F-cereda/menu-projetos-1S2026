@@ -45,7 +45,9 @@ button{
     cursor: pointer;
     box-shadow: var(--shadow);
     transition: all 0.3s ease;
-}
+};
+
+
 
 .project__button-group  input[type="button"]:hover, button:hover{
     background-color: var(--primary-hover);

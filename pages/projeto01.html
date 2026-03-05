@@ -1,23 +1,58 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto 01</title>
-    <!--css-->
-    <link rel="stylesheet" href="../css/global.css">
-    <!--fontes-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-
+    <title>Calculadora de IMC</title>
+    <link rel="stylesheet" href="../css/imc.css">
+      <!--fontes-->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Projeto 01</h1>
-    <!-- <script src="../js/navegacao.js"></script> -->
-    <script src="../js/global.js"></script>
-    <!-- <script src="../js/global-auto.js"></script> -->
+    <!--Conteudo Principal-->
+    <main class="calculator">
 
+   
+    <!--Titulo App-->
+    <header class="calculator__header">
+        <h1 class="calculator__title">Calculadora de IMC</h1>
+    </header>
+
+    <!--Seção do Formulário-->
+    <section class="calculator__form-section">
+        <form class="calculator__form" id="imcForm">
+            <div class="calculator__form-group">
+                <label for="weight" class="calculator__label">Peso (kg):</label>
+                <input type="number" id="weight" class="calculator__input" placeholder="Ex.: 70" required>
+            </div>
+
+            <div class="calculator__form-group">
+                <label for="height" class="calculator__label">Altura (m):</label>
+                <input type="number" id="height" class="calculator__input" placeholder="Ex.: 1.75" step="0.01" required>
+            </div>
+
+            <div class="calculator__buttons">
+                <button type="button" class="calculator__button calculator__button--calculate"
+                    onclick="calcularIMC()">Calcular</button>
+                <button type="button" class="calculator__button calculator__button--clear"
+                    onclick="limparCampos()">Limpar</button>
+            </div>
+        </form>
+    </section>
+
+    <!--Mensagem pra Usuario-->
+    <section class="calculator_result-section" id="resultSection">
+        <h2 class="calculator_result-title">Resultado:</h2>
+        <p class="calculator_result-text" id="resultText">Preencha os campos e clique em "Calcular".</p>
+    </section>
+
+</main>
+
+    <script src="../js/imc/imc.js"></script>
+    <script src="../js/menu/global-auto.js"></script>
     
 </body>
+
 </html>
